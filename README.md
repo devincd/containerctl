@@ -15,3 +15,8 @@ Usage of containerctl:
   -push-username string
     	username for docker login in push action
 ```
+
+### TODO
+- example for migrate image.
+- add more command.
+- add readme.md
