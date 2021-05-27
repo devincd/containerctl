@@ -1,0 +1,6 @@
+# The following are test data.
+migrationUnits:
+  - sourceImage: redis
+    destinationImage: harbor.com/library/redis
+  - sourceImage: busybox
+    destinationImage: harbor.com/library/busybox

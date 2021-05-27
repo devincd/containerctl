@@ -1,5 +1,10 @@
 containerctl
 
+### install
+```shell
+$ go get github.com/devincd/containerctl
+```
+
 ### How to use
 ```shell
 $ containerctl --help

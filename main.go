@@ -54,17 +54,18 @@ func main() {
 		panic(err)
 	}
 	for _, unit := range migrations.MigrationUnits {
+		log.Println(fmt.Sprintf("start migrate image. unit=%#v", *unit))
 		err := PullSourceImage(unit)
 		if err != nil {
-			log.Println(fmt.Sprintf("migates image with a error:%v. unit=%v", err, unit))
+			log.Println(fmt.Sprintf("migrate image with a error:%v. unit=%#v", err, *unit))
 			continue
 		}
 		err = MigrateToDestination(unit)
 		if err != nil {
-			log.Println(fmt.Sprintf("migates image with a error:%v. unit=%v", err, unit))
+			log.Println(fmt.Sprintf("migrate image with a error:%v. unit=%#v", err, *unit))
 			continue
 		}
-		log.Println(fmt.Sprintf("migates image successfully. unit=%v", unit))
+		log.Println(fmt.Sprintf("migrate image successfully. unit=%#v", *unit))
 	}
 
 }
